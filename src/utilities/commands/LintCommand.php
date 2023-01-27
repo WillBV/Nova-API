@@ -25,10 +25,10 @@ class LintCommand
             Path to code directory
             Files/Folders to ignore
         */
-        $command     = BASE_PATH . "/vendor/bin/phpcs" .
-            " --standard=" . BASE_PATH . "/novaLint.xml " .
-            BASE_PATH .
-            " --ignore=" . BASE_PATH . "/vendor/* --cache";
+        $command     = NOVA_VENDOR_PATH . "/vendor/bin/phpcs" .
+            " --standard=" . NOVA_VENDOR_PATH . "/novaLint.xml " .
+            NOVA_VENDOR_PATH .
+            " --ignore=" . NOVA_VENDOR_PATH . "/vendor/* --cache";
         $logResponse = shell_exec($command);
         echo $logResponse;
     }
@@ -49,10 +49,10 @@ class LintCommand
             Path to code directory
             Files/Folders to ignore
         */
-        $command     = BASE_PATH . "/vendor/bin/phpcbf" .
-            " --standard=" . BASE_PATH . "/novaLint.xml " .
-            BASE_PATH .
-            " --ignore=" . BASE_PATH . "/vendor/*";
+        $command     = NOVA_VENDOR_PATH . "/vendor/bin/phpcbf" .
+            " --standard=" . NOVA_VENDOR_PATH . "/novaLint.xml " .
+            NOVA_VENDOR_PATH .
+            " --ignore=" . NOVA_VENDOR_PATH . "/vendor/*";
         $logResponse = shell_exec($command);
         echo $logResponse;
     }

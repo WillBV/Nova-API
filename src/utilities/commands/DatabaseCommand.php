@@ -25,7 +25,7 @@ class DatabaseCommand
         $migrationId   = "m" . (new \DateTime())->format("ymdHis") . " ";
         $migrationText = strtolower(readline("Migration name: "));
         $migrationName = preg_replace("^\s^", "", ucwords($migrationId . $migrationText));
-        $migrationPath = BASE_PATH . "/src/utilities/database/migrations/{$migrationName}.php";
+        $migrationPath = NOVA_VENDOR_PATH . "/src/utilities/database/migrations/{$migrationName}.php";
         $success       = strtolower(readline("Create new migration '{$migrationPath}'? (y|n): "));
         if ($success === "y") {
             $migrationTemplate = "<?php\n\n" .

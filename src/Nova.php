@@ -315,7 +315,7 @@ class Nova
         }
         if (!$logBlock && ($logFolder === "error" || (in_array($logFolder, ["info", "debug"]) && self::isDebug()))) {
             $fileHandler = new StreamHandler(
-                BASE_PATH . "/logs/{$logFolder}/{$logLevel}.log",
+                NOVA_VENDOR_PATH . "/logs/{$logFolder}/{$logLevel}.log",
                 Logger::DEBUG,
                 TRUE,
                 0666

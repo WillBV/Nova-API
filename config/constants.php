@@ -1,3 +1,3 @@
 <?php
 
-define('BASE_PATH', dirname(__DIR__));
+define('NOVA_VENDOR_PATH', dirname(__DIR__) . '/vendor');
