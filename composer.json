@@ -1,0 +1,28 @@
+{
+    "name": "vaelar/nova",
+    "description": "Nova API",
+    "version": "0.1.0",
+    "type": "project",
+    "require": {
+        "php": ">=8.1.0",
+        "altorouter/altorouter": "^2.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "monolog/monolog": "^3.2",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "nova\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Will",
+            "email": "admin@willvachon.co.uk"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+if (php_sapi_name() === 'cli') {
+    $appType = "console";
+    $app = require "bootstrap/bootstrap.php";
+    $exitCode = $app->run();
+} else {
+    $exitCode = 1;
+}
+exit($exitCode);

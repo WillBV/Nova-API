@@ -48,3 +48,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Composer vendor
+vendor/
+
+# Environment files
+.env
