@@ -1,8 +1,9 @@
 {
     "name": "vaelar/nova-api",
     "description": "Nova API Library",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "type": "library",
+    "license": "proprietary",
     "require": {
         "php": ">=8.1.0",
         "altorouter/altorouter": "^2.0",
@@ -13,21 +14,19 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"
     },
-    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "nova\\": "src/"
         }
+    },
+    "config": {
+      "sort-packages": true,
+      "optimize-autoloader": true
     },
     "authors": [
         {
             "name": "Will",
             "email": "admin@willvachon.co.uk"
         }
-    ],
-    "scripts": {
-        "post-root-package-install": [
-          "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ]
-      }
+    ]
 }
