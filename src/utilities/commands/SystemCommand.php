@@ -2,8 +2,6 @@
 
 namespace nova\utilities\commands;
 
-use nova\Nova;
-
 /**
  * System
  *
