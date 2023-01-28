@@ -8,6 +8,7 @@ use nova\utilities\database\DBConnection;
 use nova\utilities\security\Security;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Monolog\Level;
 use nova\services\SystemService;
 use Psr\Log\LogLevel;
 
@@ -315,8 +316,8 @@ class Nova
         }
         if (!$logBlock && ($logFolder === "error" || (in_array($logFolder, ["info", "debug"]) && self::isDebug()))) {
             $fileHandler = new StreamHandler(
-                NOVA_VENDOR_PATH . "/logs/{$logFolder}/{$logLevel}.log",
-                Logger::DEBUG,
+                NOVA_BASE_PATH . "/logs/{$logFolder}/{$logLevel}.log",
+                Level::Debug,
                 TRUE,
                 0666
             );
