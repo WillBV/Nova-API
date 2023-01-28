@@ -193,7 +193,7 @@ class Nova
             $returnCode        = 0;
             $commandRequiresDb = [];
             $helperText        = "\033[1mAvailable Commands:\033[0m\n";
-            $sections          = glob("src/utilities/commands/*Command.php");
+            $sections          = glob(NOVA_LIBRARY_PATH . "/src/utilities/commands/*Command.php");
             foreach ($sections as $section) {
                 $className      = substr($section, strrpos($section, "/") + 1, -4);
                 $class          = "nova\utilities\commands\\{$className}";
