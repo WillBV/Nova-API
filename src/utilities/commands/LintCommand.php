@@ -25,10 +25,10 @@ class LintCommand
             Path to code directory
             Files/Folders to ignore
         */
-        $command     = NOVA_VENDOR_PATH . "/vendor/bin/phpcs" .
-            " --standard=" . NOVA_VENDOR_PATH . "/novaLint.xml " .
-            NOVA_VENDOR_PATH .
-            " --ignore=" . NOVA_VENDOR_PATH . "/vendor/* --cache";
+        $command     = NOVA_VENDOR_PATH . "/bin/phpcs" .
+            " --standard=" . NOVA_LIBRARY_PATH . "/src/lib/novaLint.xml " .
+            NOVA_BASE_PATH .
+            " --ignore=" . NOVA_VENDOR_PATH . "/* --cache";
         $logResponse = shell_exec($command);
         echo $logResponse;
     }
